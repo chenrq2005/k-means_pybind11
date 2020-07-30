@@ -1,10 +1,11 @@
 import os
 from setuptools import setup, Extension, find_packages
-
+from setuptools.command.build_ext import build_ext
 # from Cython.Build import cythonize
 import numpy as np
 import pyarrow as pa
 import pybind11
+import sys
 
 dirname = os.path.dirname(__file__)
 
@@ -105,12 +106,17 @@ class BuildExt(build_ext):
         build_ext.build_extensions(self)
 
 setup(
-    name="k-means_pybind11",
+    name="k_means_pybind11",
     ext_modules=ext_modules,
-    packages=["k-means_pybind11"],
-    version='0.0.1',
-    description='',
+    #packages=["k-means_pybind11"],
+    version=__version__,
+    description='Python binding to C++ code of K-means clustering algorithm',
+    long_description='',
     author='Ruiqiang Chen',
     author_email='chenrq2005@gmail.com',
-    license='MIT'
+    url='https://github.com/pybind/python_example',
+    setup_requires=['pybind11>=2.5.0'],
+    cmdclass={'build_ext': BuildExt},
+    zip_safe=False,
+    license='MIT',
 )

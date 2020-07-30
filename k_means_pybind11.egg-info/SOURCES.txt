@@ -1,0 +1,8 @@
+README.md
+setup.py
+k_means_pybind11.egg-info/PKG-INFO
+k_means_pybind11.egg-info/SOURCES.txt
+k_means_pybind11.egg-info/dependency_links.txt
+k_means_pybind11.egg-info/not-zip-safe
+k_means_pybind11.egg-info/top_level.txt
+src/main.cpp

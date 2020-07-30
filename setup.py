@@ -9,7 +9,7 @@ import sys
 
 dirname = os.path.dirname(__file__)
 
-__version__ = '0.0.1'
+__version__ = '0.1.0'
 
 
 class get_pybind_include(object):
@@ -108,7 +108,6 @@ class BuildExt(build_ext):
 setup(
     name="k_means_pybind11",
     ext_modules=ext_modules,
-    #packages=["k-means_pybind11"],
     version=__version__,
     description='Python binding to C++ code of K-means clustering algorithm',
     long_description='',
